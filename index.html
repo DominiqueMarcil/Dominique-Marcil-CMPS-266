@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable Typography</title>
+    <!-- External CSS for typography -->
+    <link rel="stylesheet" href="https://use.typekit.net/ctc4aep.css">
+    <link rel="stylesheet" href="https://use.typekit.net/gbw4aht.css">
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar" aria-label="Main navigation">
+            <div class="nav-container">
+                <a href="index.html" class="brand">Dominique Marcil</a>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="work.html" class="nav-link">Work</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="search-container">
+                    <label for="site-search" class="visually-hidden">Search the site</label>
+                    <input type="search" id="site-search" class="search-input" placeholder="Search..." aria-label="Search">
+                    <button class="search-button">Go</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="grid">
+        <section class="grid__item grid__item--1">
+            <h1>Header Intro</h1>
+        </section>
+        <section class="grid__item grid__item--2">
+            <h2>My Work</h2>
+            <ul>
+                <li><a href="https://github.com/DominiqueMarcil?tab=repositories" target="_blank" rel="noopener noreferrer">My GitHub</a></li>
+                <li>List item 2</li>
+                <li>List item 3</li>
+            </ul>
+        </section>
+        <section class="grid__item grid__item--3"></section>
+        <section class="grid__item grid__item--4">
+            <h2>About</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </section>
+        <section class="grid__item grid__item--5">
+            <h2>Variable</h2>
+        </section>
+        <section class="grid__item grid__item--6">
+            <h2>Axis</h2>
+        </section>
+        <section class="grid__item grid__item--7">
+            <h2>Contact Form</h2>
+            <form action="mailto:dominiquemarcill@gmail.com" method="post" enctype="text/plain">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name"><br>
+                <label for="email">E-mail:</label><br>
+                <input type="email" id="email" name="mail"><br>
+                <label for="comment">Comment:</label><br>
+                <textarea id="comment" name="comment" rows="4" cols="50"></textarea><br><br>
+                <input type="submit" value="Send">
+                <input type="reset" value="Reset">
+            </form>
+        </section>
+        <section class="grid__item grid__item--8"></section>
+    </main>
+    <footer>
+    <p>Author: Dominique Marcil</p>
+        <p>Last modified: <script>document.write(new Date().toLocaleDateString());</script></p>
+    </footer>
+</body>
+
+</html>
