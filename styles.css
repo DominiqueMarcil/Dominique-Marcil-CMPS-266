@@ -1,4 +1,4 @@
-/* Accordion container
+Accordion container
 .accordion {
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -6,41 +6,41 @@
     width: 300px;
     margin: 20px auto;
     font-family: Arial, sans-serif;
-} */
+}
 
-/* Accordion item */
-/* .accordion-item {
+
+.accordion-item {
     border-bottom: 1px solid #ccc;
-} */
+}
 
-/* Last accordion item */
-/* .accordion-item:last-child {
+
+.accordion-item:last-child {
     border-bottom: none;
-} */
+}
 
-/* Accordion header */
-/* .accordion-header {
+
+.accordion-header {
     background-color: #f7f7f7;
     padding: 15px;
     cursor: pointer;
     transition: background-color 0.3s ease;
     user-select: none;
-} */
+}
 
-/* Accordion header on hover */
-/* .accordion-header:hover {
+
+.accordion-header:hover {
     background-color: #e7e7e7;
-} */
+}
 
-/* Accordion content */
-/* .accordion-content {
+
+.accordion-content {
     display: none;
     padding: 15px;
     background-color: #fff;
-} */
+}
 
-/* Active accordion header */
-/* .accordion-header.active {
+
+ .accordion-header.active {
     background-color: #e7e7e7;
 }
 
@@ -80,9 +80,9 @@
     color: #bbb;
     text-decoration: none;
     cursor: pointer;
-  } */
+  } 
 
-/* @import "fonts.css";
+@import "fonts.css";
 @import "nav.css";
 
 :root {
@@ -257,4 +257,4 @@ img {
 
 .grid__item:nth-child(4n+3) {
     background-color: var(--box4);
-} */
+}
