@@ -257,4 +257,34 @@ img {
 
 .grid__item:nth-child(4n+3) {
     background-color: var(--box4);
+} */
+
+/* .container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
 }
+
+.about {
+    padding: 20px;
+    background: #fff;
+    margin-top: 20px;
+}
+.about h1 {
+    text-align: center;
+}
+.about p {
+    text-align: justify;
+}
+.resume-link {
+    text-align: center;
+    margin-top: 20px;
+}
+.resume-link a {
+    background: #77aaff;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+} */
+
