@@ -47,7 +47,7 @@ console.log('%cThanks for checking out my site. If you have any questions, feel 
     } else {
         content.style.display = 'block';
     }
-}
+
 
 var modal1 = document.getElementById("myModal");
 var modal2 = document.getElementById("myModal2");
