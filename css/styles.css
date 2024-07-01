@@ -170,9 +170,6 @@ Accordion container
     cursor: pointer;
   } 
 
-@import "fonts.css";
-@import "nav.css";
-
 :root {
     --lines: #4e67aa;
     --text: #ffffff;
@@ -183,6 +180,7 @@ Accordion container
 * {
     box-sizing: border-box;
     background:#054D33;
+    font-family: "montserrat", sans-serif;
 }
 
 html,
@@ -221,7 +219,8 @@ img {
     padding: 0px 3px;
     font-family: serif;
     font-style: italic;
-    font-size: 12px;
+    font-size: 10px;
+    
 }
 
 .grid__item--1::before {
@@ -288,24 +287,38 @@ img {
     content: '16';
 }
 
+/* Grid Inside Items */
+
 .grid__item--1 {
     grid-column: span 6;
     grid-row: span 5;
+    display: flex;
 }
 
 .grid__item--2 {
     grid-column: span 1;
     grid-row: span 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align items if needed */
+    padding: 20px; 
+    font-size: 30px;
 }
 
 .grid__item--3 {
     grid-column: span 2;
     grid-row: span 3;
+    font-size: 30px;
 }
 
 .grid__item--4 {
     grid-column: span 3;
     font-family: "montserrat", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align items if needed */
+    padding: 20px; 
+    font-size: 30px;
 }
 
 .grid__item--5 {
@@ -318,16 +331,23 @@ img {
     grid-column: span 5;
     grid-row: span 2;
     font-family: "montserrat", sans-serif;
+    font-size: 30px;
 }
 
 .grid__item--7 {
     grid-column: span 6;
     grid-row: span 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align items if needed */
+    padding: 20px; 
+    font-size: 30px;
 }
 
 .grid__item--8 {
     grid-column: span 6;
     grid-row: span 3;
+    font-size: 30px;
 }
 
 
@@ -358,4 +378,8 @@ img {
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
+}
+
+footer {
+    font-size: 20px; /* This targets both the footer and paragraph tags within it */
 }
