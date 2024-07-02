@@ -22,15 +22,25 @@ import emailjs from '@emailjs/browser';
       };
     
       return (
-        <form ref={form} onSubmit={sendEmail}>
-          <label>Name</label>
-          <input type="text" name="user_name" />
-          <label>Email</label>
-          <input type="email" name="user_email" />
-          <label>Message</label>
-          <textarea name="message" />
-          <input type="submit" value="Send" />
-        </form>
+        <div className="container">
+      <form ref={form} onSubmit={sendEmail}>
+        <h5>Contact Us</h5>
+        <div className="form-group">
+          <label htmlFor="name">Name</label>
+          <input type="text" id="name" name="from_name" required />
+        </div>
+        <div className="form-group">
+          <label htmlFor="email">Email</label>
+          <input type="email" id="email" name="from_email" required />
+        </div>
+        <div className="form-group">
+          <label htmlFor="message">Message</label>
+          <textarea id="message" name="message" required />
+        </div>
+        <button type="submit">Send</button>
+        <div id="status"></div>
+      </form>
+    </div>
       );
     };
 
