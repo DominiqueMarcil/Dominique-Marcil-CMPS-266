@@ -56,34 +56,5 @@ $(document).ready(function() {
     });
 });
 
-// Contact Form
-// Initialize EmailJS
-document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault();
-
-    // Get the form data
-    var name = document.getElementById('name').value;
-    var email = document.getElementById('email').value;
-    var message = document.getElementById('message').value;
-
-    // Send the email
-    emailjs.send('service_hhvigdi', 'template_e090hdn', {
-        from_name: name,
-        from_email: email,
-        message: message
-    })
-    .then(function(response) {
-        console.log('SUCCESS!', response.status, response.text);
-        document.getElementById('status').innerText = 'Message sent successfully!';
-        document.getElementById('status').style.color = 'green';
-    }, function(error) {
-        console.log('FAILED...', error);
-        document.getElementById('status').innerText = 'Failed to send message.';
-        document.getElementById('status').style.color = 'red';
-    });
-
-    // Clear the form
-    document.getElementById('contact-form').reset();
-});
 
 

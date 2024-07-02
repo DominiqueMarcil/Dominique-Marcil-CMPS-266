@@ -6,11 +6,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <script src="script.js" defer></script>
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script>
-        (function() {
-            emailjs.init("3paMIOPOwV2E7vtkZ");
-        })();
-    </script>
+    
     <title>About</title>
 </head>
 <body>
@@ -44,7 +40,7 @@
               <h1 class="footer__logo">Dominique Marcil</h1>
                   
               <div class="container">
-                <form id="contact-form">
+                <form onSubmit={sendForm}>
                     <h5>Contact Us</h5>
                     <div class="form-group">
                         <label for="name">Name</label>
