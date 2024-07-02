@@ -9,7 +9,7 @@ import emailjs from '@emailjs/browser';
     
         emailjs
           .sendForm('service_hhvigdi', 'template_e090hdn', form.current, {
-            publicKey: '3paMIOPOwV2E7vtkZ',
+            publicKey: '7vGvj0RHC4zrJvXu2',
           })
           .then(
             () => {
