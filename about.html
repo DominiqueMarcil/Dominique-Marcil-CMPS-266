@@ -18,33 +18,126 @@
                     <li class="nav-item"><a href="work.html" class="nav-link">Work</a></li>
                     <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
                 </ul>
-                <div class="search-container">
-                    <label for="site-search" class="visually-hidden">Search the site</label>
-                    <input type="search" id="site-search" class="search-input" placeholder="Search..." aria-label="Search">
-                    <button class="search-button">Go</button>
-                </div>
             </div>
         </nav>
     </header>
     <main>
-        <section class="about container">
-            <h1>About Me</h1>
+        <section class="aboutcontainer">
+            <h1>DOMINIQUE MARCIL</h1>
             <p>
                 Hello! I'm Dominique Marcil, a Front-end developer with a passion for creating accesssible web spaces. With a background in graphic design and neurodivergent research, I have developed a keen eye for detail and a deep understanding of accessibility design for those with neuro variances. My journey in front-end development has been fueled by a relentless pursuit of knowledge and a drive to innovate. Over the years, I have had the privilege of working on a variety of projects that have honed my skills and broadened my perspective. I am always excited to take on new challenges and collaborate with others who share my enthusiasm for accessibility in the digital landscape.
             </p>
             <p>
                 Outside of my professional life, I enjoy creative design, reasding, which allows me to bring a well-rounded approach to my work. I believe in the power of continuous learning and strive to stay updated with the latest trends and technologies in my field.
-                Check me out on Linkedin <p><a href="https://www.externalwebsite.com" target="_blank" rel="noopener noreferrer">Visit an External Website</a></p>
+                Check me out on Linkedin <p>
             </p>
-            Heres my resume too if you'd like to download it!
-            <div class="resume-link">
-                <a href="images/Dominique Marcil Resume.pdf" download>Download My Resume</a>
-            </div>
         </section>
     </main>
-    <footer>
-    <p>Author: Dominique Marcil</p>
-        <p>Last modified: <script>document.write(new Date().toLocaleDateString());</script></p>
+        <footer class="footer">
+            <div class="footer__addr">
+              <h1 class="footer__logo">Dominique Marcil</h1>
+                  
+              <div class="container">
+                <form id="contact-form">
+                    <h5>Contact Us</h5>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit">Send</button>
+                    <div id="status"></div>
+                </form>
+            </div>
+            </div>
+            
+            <ul class="footer__nav">
+              <li class="nav__item">
+                <h4 class="nav__title">Media</h4>
+          
+                <ul class="nav__ul">
+                  <li>
+                    <a href="https://github.com/DominiqueMarcil?tab=repositories" target="_blank">GitHub</a>
+                  </li>
+          
+                  <li>
+                    <a href="https://www.behance.net/dominiquemarcil" target="_blank">Behance</a>
+                  </li>
+                      
+                  <li>
+                    <a href="https://www.linkedin.com/in/dominique-marcil-uleth-newmedia/" target="_blank">LinkedIn</a>
+                </li>
+                </ul>
+              </li>
+              
+              <li class="nav__item nav__item--extra">
+                <h2 class="nav__title">Technology</h2>
+                
+                <ul class="nav__ul nav__ul--extra">
+                  <li>
+                    <a href="#">Hardware Design</a>
+                  </li>
+                  
+                  <li>
+                    <a href="#">Software Design</a>
+                  </li>
+                  
+                  <li>
+                    <a href="#">Digital Signage</a>
+                  </li>
+                  
+                  <li>
+                    <a href="#">Automation</a>
+                  </li>
+                  
+                  <li>
+                    <a href="#">Artificial Intelligence</a>
+                  </li>
+                  
+                  <li>
+                    <a href="#">IoT</a>
+                  </li>
+                </ul>
+              </li>
+              
+              <li class="nav__item">
+                <h2 class="nav__title">Legal</h2>
+                
+                <ul class="nav__ul">
+                  <li>
+                    <a href="#">Privacy Policy</a>
+                  </li>
+                  
+                  <li>
+                    <a href="#">Terms of Use</a>
+                  </li>
+                  
+                  <li>
+                    <div class="resume-link">
+                        <a href="images/Dominique Marcil Resume.pdf" download>Download My Resume</a>
+                    </div></a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <div class="legal">
+                <p>Author: Dominique Marcil</p>
+                <p>Last modified: <script>document.write(new Date().toLocaleDateString());</script></p>
+              
+              
+              <div class="legal__links">
+                <span>Made with <span class="heart">♥</span> remotely from Anywhere</span>
+              </div>
+            </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </body>
 </html>

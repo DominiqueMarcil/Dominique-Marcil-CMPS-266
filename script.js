@@ -27,51 +27,65 @@ console.log('%cThanks for checking out my site. If you have any questions, feel 
 })();
 
 
+$(document).ready(function() {
+    $('.workaccordion-header').click(function(event) {
+        // Prevent the document click event from firing when an accordion header is clicked
+        event.stopPropagation();
 
-// function toggleAccordion(event) {
-//     const header = event.currentTarget;
-//     const content = header.nextElementSibling;
-    
-    const allContents = document.querySelectorAll('.accordion-content');
-    
-    // Close all contents
-    allContents.forEach(item => {
-        if (item !== content) {
-            item.style.display = 'none';
+        // Check if the clicked accordion item is already active
+        var isActive = $(this).hasClass('active');
+
+        // Close all accordion items except the clicked one if it is active
+        $('.workaccordion-content').not($(this).next()).slideUp();
+        $('.workaccordion-header').not($(this)).removeClass('active');
+
+        // If the clicked accordion item was not active, open it
+        if (!isActive) {
+            $(this).next('.workaccordion-content').slideDown();
+            $(this).addClass('active');
         }
     });
-    
-    // Toggle current content
-    if (content.style.display === 'block') {
-        content.style.display = 'none';
-    } else {
-        content.style.display = 'block';
-    }
+
+    // Listen for clicks on the document
+    $(document).on('click', function(event) {
+        // If the click is outside of an accordion header or content, close all accordions
+        if (!$(event.target).closest('.workaccordion-header, .workaccordion-content').length) {
+            $('.workaccordion-content').slideUp();
+            $('.workaccordion-header').removeClass('active');
+        }
+    });
+});
+
+// Contact Form
+// Initialize EmailJS
+(function(){
+    emailjs.init('dominiquemarcill@gmail.com'); // Replace 'YOUR_USER_ID' with your actual EmailJS user ID
+})();
+
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    // Get the form data
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+    var message = document.getElementById('message').value;
+
+    // Send the email
+    emailjs.send('3paMIOPOwV2E7vtkZ', 'JSqF7KUl4rxVmfpqt-qXZ', { // Replace with your actual service ID and template ID
+        from_name: name,
+        from_email: email,
+        message: message
+    })
+    .then(function(response) {
+        document.getElementById('status').innerText = 'Message sent successfully!';
+        document.getElementById('status').style.color = 'green';
+    }, function(error) {
+        document.getElementById('status').innerText = 'Failed to send message.';
+    });
+
+    // Clear the form
+    document.getElementById('contact-form').reset();
+});
 
 
-var modal1 = document.getElementById("myModal");
-var modal2 = document.getElementById("myModal2");
 
-var img1 = document.getElementById("Work1");
-var img2 = document.getElementById("Work2");
-
-var modalImg1 = document.getElementById("img01");
-var modalImg2 = document.getElementById("img02");
-
-img1.onclick = function(){
-  modal1.style.display = "block";
-  modalImg1.src = this.src;
-}
-
-img2.onclick = function(){
-  modal2.style.display = "block";
-  modalImg2.src = this.src;
-}
-
-var spans = document.getElementsByClassName("close");
-
-for (var i = 0; i < spans.length; i++) {
-  spans[i].onclick = function() { 
-    this.parentElement.style.display = "none";
-  }
-}
