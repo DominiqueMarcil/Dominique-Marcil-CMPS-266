@@ -58,8 +58,11 @@ $(document).ready(function() {
 
 // Contact Form
 // Initialize EmailJS
-(function(){
-    emailjs.init('dominiquemarcill@gmail.com'); // Replace 'YOUR_USER_ID' with your actual EmailJS user ID
+(function() {
+    // https://dashboard.emailjs.com/admin/account
+    emailjs.init({
+      publicKey: "3paMIOPOwV2E7vtkZ",
+    });
 })();
 
 document.getElementById('contact-form').addEventListener('submit', function(event) {
@@ -71,7 +74,7 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     var message = document.getElementById('message').value;
 
     // Send the email
-    emailjs.send('3paMIOPOwV2E7vtkZ', 'JSqF7KUl4rxVmfpqt-qXZ', { // Replace with your actual service ID and template ID
+    emailjs.send('service_hhvigdi', 'template_e090hdn', { // Replace with your actual service ID and template ID
         from_name: name,
         from_email: email,
         message: message
