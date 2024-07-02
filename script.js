@@ -58,13 +58,6 @@ $(document).ready(function() {
 
 // Contact Form
 // Initialize EmailJS
-(function() {
-    // https://dashboard.emailjs.com/admin/account
-    emailjs.init({
-      publicKey: "3paMIOPOwV2E7vtkZ",
-    });
-})();
-
 document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault();
 
@@ -74,21 +67,23 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     var message = document.getElementById('message').value;
 
     // Send the email
-    emailjs.send('service_hhvigdi', 'template_e090hdn', { // Replace with your actual service ID and template ID
+    emailjs.send('service_hhvigdi', 'template_e090hdn', {
         from_name: name,
         from_email: email,
         message: message
     })
     .then(function(response) {
+        console.log('SUCCESS!', response.status, response.text);
         document.getElementById('status').innerText = 'Message sent successfully!';
         document.getElementById('status').style.color = 'green';
     }, function(error) {
+        console.log('FAILED...', error);
         document.getElementById('status').innerText = 'Failed to send message.';
+        document.getElementById('status').style.color = 'red';
     });
 
     // Clear the form
     document.getElementById('contact-form').reset();
 });
-
 
 
