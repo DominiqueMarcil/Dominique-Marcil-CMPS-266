@@ -3,6 +3,10 @@
 @import "contact.css";
 @import "work.css";
 
+
+* {
+  scroll-behavior: smooth;
+}
 :root {
     --lines: #4e67aa;
     --text: #ffffff;
@@ -389,6 +393,7 @@ img {
 /* Footer */
 footer {
     font-size: 16px; /* Adjusted font size */
+   
 }
 
 .footer {
@@ -398,6 +403,7 @@ footer {
     background-color: var(--lines);
     border-top: 1px solid var(--accent);
     padding: 7px; /* Reduced padding */
+    z-index: 2;
 }
 
 .footer > * {
@@ -540,3 +546,5 @@ button:hover {
     margin-top: 10px; /* Reduced margin */
     color: red;
 }
+
+
