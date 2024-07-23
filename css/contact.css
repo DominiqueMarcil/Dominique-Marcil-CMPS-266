@@ -2,17 +2,19 @@ body {
     overflow-x: hidden;
 }
 
+
 .container2 {
     background: var(--lines);
     padding: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     margin: 1px auto; /* Center the element horizontally */
-    width: 90%;
+    width: 60%;
+    height: 30%;
 }
 
 h6 {
-    font-size: 1.5em; /* Increase the font size */
+    font-size: 1em; /* Increase the font size */
     text-align: center; /* Center the text */
     color: var(--accent); /* Change the text color to a darker gray */
     text-transform: uppercase;
@@ -29,25 +31,28 @@ label2 {
 
 input, textarea {
     width: 100%;
-    padding: 8px; 
+    padding: 3px; 
     border: 1px solid #ccc;
     border-radius: 3px;
 }
 
 .textfield2 {
     color: var(--accent); /* Change the text color to a darker gray */
-  }
+    font-size: 0.75em; /* Increase the font size */
+    margin-top: 10px; /* Adjust this value to push the element lower */
+    padding: 0%;
+    margin-bottom: -10px; /* Adjust this value to control the bottom margin */
+}
   
   .form-group2 input, .form-group2 textarea {
-    width: 50%; /* Make the fillable area smaller */
-    padding: 10px; /* Add some padding for better usability */
+    width: 50%;
     border: 1px solid #ccc; /* Add a light gray border */
-    border-radius: 5px; /* Add a subtle border radius */
-    margin-bottom: 10px; /* Add some space between the form fields */
+    margin-top: 5px; /* Add some space between the form fields */
+    margin-bottom: 0;
   }
 
 button2 {
-    padding: 8px 16px; /* Reduced padding */
+    padding: 8px 16px; 
     background: rgb(38, 83, 204); /* Change the background color */
     border: none;
     color: var(--accent);
@@ -81,6 +86,26 @@ svg {
     fill: var(--accent);
     stroke: #000;
     stroke-width: 2;
+    transition: transform 0.2s; /* Smooth transition */
+}
+
+.circle:hover {
+    animation: jiggle 0.5s infinite; /* Apply jiggle animation on hover */
+}
+
+@keyframes jiggle {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(5deg);
+    }
+    50% {
+        transform: rotate(-5deg);
+    }
+    75% {
+        transform: rotate(5deg);
+    }
 }
 
 /* Text Styles */
@@ -96,3 +121,4 @@ svg {
     height: 100px; /* Sets the height of the div */
     width: 100%; /* Sets the width of the div to fill its container */
 }
+
