@@ -1,5 +1,7 @@
-document.querySelector('form').addEventListener('submit', function() {
-    setTimeout(() => {
-        this.reset();
-    }, 500); // 5000 milliseconds = 5 seconds
-});
+// window.onload = function() {
+//         // Reset the form fields when the page loads
+//         document.getElementById("form").reset();
+//     };
+
+    // madisonmarcil001@gmail.com
+

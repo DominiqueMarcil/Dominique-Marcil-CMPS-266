@@ -84,7 +84,7 @@ svg {
 /* Circle Styles */
 .circle {
     fill: var(--accent);
-    stroke: #000;
+    stroke: #ffffff;
     stroke-width: 2;
     transition: transform 0.2s; /* Smooth transition */
 }
@@ -111,7 +111,7 @@ svg {
 /* Text Styles */
 .circle-text {
     font-size: 20px;
-    fill: #333;
+    fill: #ffffff;
     text-anchor: middle;
 }
 

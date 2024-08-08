@@ -25,8 +25,14 @@ console.log('%cThanks for checking out my site. If you have any questions, feel 
         }
     };
 })();
+/*
+    Number Guessing Game inspired by basic JavaScript tutorials on MDN Web Docs and freeCodeCamp.
+    Accordion functionality adapted from jQuery UI documentation and W3Schools.
+    Modal Image Viewer script inspired by a W3Schools tutorial.
+*/
 
 
+// This is Jquery for the accordion | https://www.w3schools.com/howto/howto_js_accordion.asp
 $(document).ready(function() {
     $('.workaccordion-header').click(function(event) {
         // Prevent the document click event from firing when an accordion header is clicked
@@ -78,3 +84,23 @@ var span = document.getElementsByClassName("close")[0];
 span.onclick = function() { 
     modal.style.display = "none";
 }
+
+
+// Sets color sceheme for all page when clicked | Accessibility feature
+function setColorScheme(scheme) {
+    document.body.className = scheme;
+}
+document.addEventListener('DOMContentLoaded', function() {
+    const savedScheme = localStorage.getItem('color-scheme');
+    if (savedScheme) {
+        setColorScheme(savedScheme);
+    }
+});
+
+function setColorScheme(scheme) {
+    document.body.className = scheme;
+    localStorage.setItem('color-scheme', scheme);
+}
+
+
+
