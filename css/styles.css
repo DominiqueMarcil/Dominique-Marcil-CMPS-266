@@ -139,7 +139,7 @@ body.deuteranopia {
     /* Define the CSS variables */
     --lines: #4b6798;  /* Muted Blue */
     --text: #ffffff;  /* White */
-    --accent: #0d0049;  /* Bright Yellow */
+    --accent: #ffffff;  /* Bright Yellow */
     --main: #28237a;  /* Teal Green */
 }
 
@@ -631,3 +631,60 @@ button:hover {
       transform: translateX(-50%); /* move 50% to the left (half of the total width) */
     }
   }
+
+  /* Music Player */
+  iframe {
+    border-radius: 12px;
+    width: 80%;
+    height: 352px;
+    border: none;
+    overflow: hidden;
+  }
+  
+  iframe:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  iframe:focus {
+    outline: none;
+  }
+
+  .styled-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.styled-list li {
+    margin: 10px 0;
+}
+
+.styled-list li a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+    display: inline-block;
+    padding: 10px 15px;
+    border: 2px solid #007BFF;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.styled-list li a:hover {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+.styled-list li:last-child {
+    background-color: #f8f9fa;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+}
+
+.workaccordion-content {
+    display: none;
+}

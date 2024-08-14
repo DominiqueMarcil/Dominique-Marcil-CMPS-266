@@ -65,25 +65,30 @@ $(document).ready(function() {
 
 
 // Modal Expolore Alberta 
-var modal = document.getElementById("myModal");
+// Get all images and modals
+var imgs = document.querySelectorAll('.portfolioImage img');
+var modals = document.querySelectorAll('.modal');
+var spans = document.querySelectorAll('.close');
 
-// Get the image and insert it inside the modal - use its "alt" text as a caption
-var img = document.getElementById("exploreAB");
-var modalImg = document.getElementById("img01");
-var captionText = document.getElementById("caption");
-img.onclick = function(){
+// Loop through all images
+imgs.forEach((img, index) => {
+  // Get the corresponding modal and its elements
+  var modal = modals[index];
+  var modalImg = modal.querySelector('.modal-content');
+  var captionText = modal.querySelector('#caption');
+
+  // Add an onclick event to the image
+  img.onclick = function() {
     modal.style.display = "block";
     modalImg.src = this.src;
     captionText.innerHTML = this.alt;
-}
+  }
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() { 
+  // Add an onclick event to the close span
+  spans[index].onclick = function() {
     modal.style.display = "none";
-}
+  }
+});
 
 
 // Sets color sceheme for all page when clicked | Accessibility feature
@@ -101,6 +106,22 @@ function setColorScheme(scheme) {
     document.body.className = scheme;
     localStorage.setItem('color-scheme', scheme);
 }
+
+// Carasoul of Quotes
+document.addEventListener("DOMContentLoaded", function() {
+    if (window.location.hash) {
+        const hash = window.location.hash.substring(1);
+        const element = document.getElementById(hash);
+        
+        if (element) {
+            const accordionContent = element.querySelector(".workaccordion-content");
+
+            if (accordionContent && accordionContent.style.display !== "block") {
+                accordionContent.style.display = "block"; // Open the accordion item
+            }
+        }
+    }
+});
 
 
 
