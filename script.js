@@ -1,3 +1,4 @@
+// Javascript One| Unit 5 | Number Guessing Game
 console.log('%cHey there, curious coder! 👋', 'color: #77aaff; font-size: 20px;');
 console.log('%cThanks for checking out my site. If you have any questions, feel free to reach out! In the mean time, lets play a game!', 'color: #77aaff; font-size: 16px;');
 
@@ -32,7 +33,7 @@ console.log('%cThanks for checking out my site. If you have any questions, feel 
 */
 
 
-// This is Jquery for the accordion | https://www.w3schools.com/howto/howto_js_accordion.asp
+// This is Jquery for the accordion | https://www.w3schools.com/howto/howto_js_accordion.asp | Unit 6
 $(document).ready(function() {
     $('.workaccordion-header').click(function(event) {
         // Prevent the document click event from firing when an accordion header is clicked
@@ -63,7 +64,7 @@ $(document).ready(function() {
 });
 
 
-
+// Javascript Two | Unit 5 | Modal Image Viewer
 // Modal Expolore Alberta 
 // Get all images and modals
 var imgs = document.querySelectorAll('.portfolioImage img');
@@ -90,7 +91,7 @@ imgs.forEach((img, index) => {
   }
 });
 
-
+// Javascript Three | Unit 5 | Colour Blindness Feature
 // Sets color sceheme for all page when clicked | Accessibility feature
 function setColorScheme(scheme) {
     document.body.className = scheme;
@@ -124,4 +125,6 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
+// AJAX API | Unit 6 | Fetch API
+// Can I use a live chat bot as a fetch API? I could use CHATBOT API
 
