@@ -109,20 +109,20 @@ function setColorScheme(scheme) {
 }
 
 // Carasoul of Quotes
-document.addEventListener("DOMContentLoaded", function() {
-    if (window.location.hash) {
-        const hash = window.location.hash.substring(1);
-        const element = document.getElementById(hash);
+// document.addEventListener("DOMContentLoaded", function() {
+//     if (window.location.hash) {
+//         const hash = window.location.hash.substring(1);
+//         const element = document.getElementById(hash);
         
-        if (element) {
-            const accordionContent = element.querySelector(".workaccordion-content");
+//         if (element) {
+//             const accordionContent = element.querySelector(".workaccordion-content");
 
-            if (accordionContent && accordionContent.style.display !== "block") {
-                accordionContent.style.display = "block"; // Open the accordion item
-            }
-        }
-    }
-});
+//             if (accordionContent && accordionContent.style.display !== "block") {
+//                 accordionContent.style.display = "block"; // Open the accordion item
+//             }
+//         }
+//     }
+// });
 
 
 // AJAX API | Unit 6 | Fetch API
