@@ -116,3 +116,8 @@
   padding-right: 15%;
 }
 
+.no-link-style {
+  color: inherit; /* Inherit the color from the parent element */
+  text-decoration: underline; /* Remove underline */
+  font-weight: bold; /* Make the text bold */
+}
