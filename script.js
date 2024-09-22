@@ -55,13 +55,14 @@ $(document).ready(function() {
 
     // Listen for clicks on the document
     $(document).on('click', function(event) {
-        // If the click is outside of an accordion header or content, close all accordions
-        if (!$(event.target).closest('.workaccordion-header, .workaccordion-content').length) {
-            $('.workaccordion-content').slideUp();
-            $('.workaccordion-header').removeClass('active');
-        }
-    });
+    if (!$(event.target).parents('.workaccordion-item, .workaccordion-content').length) {
+        $('.workaccordion-content').slideUp();
+        $('.workaccordion-item').removeClass('active');
+    }
 });
+});
+
+
 
 
 // Javascript Two | Unit 5 | Modal Image Viewer
@@ -108,21 +109,6 @@ function setColorScheme(scheme) {
     localStorage.setItem('color-scheme', scheme);
 }
 
-// Carasoul of Quotes
-// document.addEventListener("DOMContentLoaded", function() {
-//     if (window.location.hash) {
-//         const hash = window.location.hash.substring(1);
-//         const element = document.getElementById(hash);
-        
-//         if (element) {
-//             const accordionContent = element.querySelector(".workaccordion-content");
-
-//             if (accordionContent && accordionContent.style.display !== "block") {
-//                 accordionContent.style.display = "block"; // Open the accordion item
-//             }
-//         }
-//     }
-// });
 
 
 // AJAX API | Unit 6 | Fetch API
