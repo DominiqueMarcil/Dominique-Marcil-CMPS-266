@@ -138,8 +138,8 @@ body.deuteranopia {
 
     /* Define the CSS variables */
     --lines: #4b6798;  /* Muted Blue */
-    --text: #ffffff;  /* White */
-    --accent: #ffffff;  /* Bright Yellow */
+    --text: #000000;  /* White */
+    --accent: #01013c;  /* Bright Yellow */
     --main: #28237a;  /* Teal Green */
 }
 
@@ -267,7 +267,7 @@ body {
 }
 
 img {
-    max-width: 100%;
+    max-width: 95%;
 }
 
 .grid {

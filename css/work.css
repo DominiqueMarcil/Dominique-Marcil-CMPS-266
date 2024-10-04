@@ -294,3 +294,17 @@ iframe {
 #repo-data a:hover, #api-data a:hover {
   text-decoration: underline;
 }
+
+/* CSS class for controlling the width and appearance of the project description */
+.project-description {
+  max-width: 600px; /* Controls the maximum width of the paragraph */
+  margin: 0 auto; /* Centers the paragraph on the page */
+  line-height: 1.6; /* Improves readability with appropriate line spacing */
+  text-align: left; /* Aligns the text to the left */
+  font-size: 16px; /* Adjusts the font size */
+  color: #555; /* You can adjust the text color */
+  padding: 20px; /* Adds padding for better readability */
+  background-color: #f9f9f9; /* Optional: Adds a light background color */
+  border-radius: 8px; /* Optional: Rounds the corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a slight shadow */
+}
