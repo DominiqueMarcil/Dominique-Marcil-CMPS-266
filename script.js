@@ -112,5 +112,55 @@ function setColorScheme(scheme) {
 
 
 // AJAX API | Unit 6 | Fetch API
-// Can I use a live chat bot as a fetch API? I could use CHATBOT API
+// Make an AJAX request to the GitHub API
+fetch('https://api.github.com/repos/DominiqueMarcil/FrankSlideMap')
+  .then(response => response.json())
+  .then(data => {
+    // Get the div where you want to display the data
+    const repoDataDiv = document.getElementById('repo-data');
+
+    // Create HTML structure with fetched data
+    const repoInfo = `
+      <p><strong>Repository Name:</strong> ${data.name}</p>
+      <p><strong>Description:</strong> ${data.description}</p>
+      <p><strong>Stars:</strong> ${data.stargazers_count}</p>
+      <p><strong>Forks:</strong> ${data.forks_count}</p>
+      <p><strong>Open Issues:</strong> ${data.open_issues_count}</p>
+      <p><strong>Repository URL:</strong> <a href="${data.html_url}" target="_blank">${data.html_url}</a></p>
+    `;
+
+    // Insert the data into the div
+    repoDataDiv.innerHTML = repoInfo;
+  })
+  .catch(error => console.error('Error:', error));
+
+
+  fetch('https://dominiquemarcil.github.io/FrankSlideMap/data.json')
+  .then(response => response.json())
+  .then(data => {
+    console.log(data);
+    // Insert data into HTML as needed
+  })
+  .catch(error => console.error('Error:', error));
+
+
+  
+// Map API AJAX 
+fetch('https://dominiquemarcil.github.io/FrankSlideMap/data.json')
+  .then(response => response.json()) // Parse response as JSON
+  .then(data => {
+    // Find the div where the data will be displayed
+    const apiDataDiv = document.getElementById('api-data');
+    
+    // Insert the JSON data into the HTML
+    apiDataDiv.innerHTML = `
+      <h2>${data.title}</h2>
+      <p>${data.description}</p>
+      <p><strong>Coordinates:</strong> ${data.coordinates}</p>
+    `;
+  })
+  .catch(error => {
+    console.error('Error fetching data:', error);
+    document.getElementById('api-data').innerText = 'Error fetching data.';
+  });
 
