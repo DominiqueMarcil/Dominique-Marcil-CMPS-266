@@ -284,7 +284,7 @@ img {
     position: relative;
 }
 
-.grid__item::before {
+/* .grid__item::before {
     position: absolute;
     top: 0;
     left: 0;
@@ -295,9 +295,9 @@ img {
     font-style: italic;
     font-size: 10px;
     
-}
+} */
 
-.grid__item--1::before {
+/* .grid__item--1::before {
     content: '1';
 }
 
@@ -355,11 +355,11 @@ img {
 
 .grid__item--15::before {
     content: '15';
-}
+} */
 
-.grid__item--16::before {
+/* .grid__item--16::before {
     content: '16';
-}
+} */
 
 /* Grid Inside Items */
 
