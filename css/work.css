@@ -127,7 +127,7 @@
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  max-width: 500px;
+  /* max-width: 500px; */
   width: 100%;
   text-align: center;
 }
@@ -176,8 +176,121 @@
     font-size: 16px;
   }
 
-  iframe {
+/* This is the  main container for the repository Coordinates pulling from the custom API using AJAX */
+
+  #api-data {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 500px;
     width: 100%;
-    height: 100%;
-    border: none;
+    text-align: center;
   }
+  
+  /* Styling for the repository info */
+  #api-data p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  /* Styling for labels like 'Repository Name' */
+  #api-data p strong {
+    color: #000;
+  }
+  
+  /* Link styling */
+  #api-data a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  #api-data a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Box styling for each piece of information */
+  #api-data p {
+    /* background-color: #f9f9f9; */
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 600px) {
+    #api-data {
+      padding: 15px;
+      max-width: 90%;
+    }
+  }
+  
+  
+    #repo-data p {
+      font-size: 16px;
+    }
+
+    h2 {
+      color: var(--accent);
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .containerSlide {
+      display: flex;
+      flex-wrap: wrap; /* Allows wrapping if there isn't enough space */
+      justify-content: space-between; /* Space between each element */
+      gap: 20px; /* Adds space between items */
+      align-items: flex-start; /* Align items to the top of the row */
+      padding: 20px;
+    }
+
+   
+#repo-data, #api-data, iframe {
+  flex: 1; /* Allow the items to grow and fill the available space */
+  max-width: auto; /* Optional: Set a maximum width for content boxes */
+}
+
+/* Making sure the iframe displays at a good height */
+iframe {
+  height: 500px; /* Set a height for the iframe */
+  border: none;
+}
+
+/* Styling for the repository info */
+#repo-data, #api-data {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Shared styling for paragraphs */
+#repo-data p, #api-data p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+/* Styling for links */
+#repo-data a, #api-data a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#repo-data a:hover, #api-data a:hover {
+  text-decoration: underline;
+}
